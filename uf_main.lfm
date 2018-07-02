@@ -8,13 +8,17 @@ object frmMain: TfrmMain
   ClientWidth = 550
   Menu = mnuMain
   LCLVersion = '1.6.0.4'
-  object Label1: TLabel
-    Left = 51
-    Height = 17
-    Top = 230
-    Width = 45
-    Caption = 'Label1'
-    ParentColor = False
+  object lstBurst: TListBox
+    Left = 10
+    Height = 396
+    Top = 10
+    Width = 100
+    Align = alLeft
+    BorderSpacing.Around = 10
+    ItemHeight = 0
+    ScrollWidth = 98
+    TabOrder = 0
+    TopIndex = -1
   end
   object mnuMain: TMainMenu
     left = 24
@@ -27,9 +31,5 @@ object frmMain: TfrmMain
         OnClick = mnuMainFileOpenClick
       end
     end
-  end
-  object SelectDirectoryDialog1: TSelectDirectoryDialog
-    left = 78
-    top = 112
   end
 end
