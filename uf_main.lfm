@@ -12,11 +12,11 @@ object frmMain: TfrmMain
     Left = 10
     Height = 396
     Top = 10
-    Width = 100
+    Width = 510
     Align = alLeft
     BorderSpacing.Around = 10
     ItemHeight = 0
-    ScrollWidth = 98
+    ScrollWidth = 508
     TabOrder = 0
     TopIndex = -1
   end

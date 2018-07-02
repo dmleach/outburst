@@ -13,6 +13,7 @@ type
 
     TDirectory = class
     public
+      class function getBursts(directory: string): string;
       class function getDirectory: string; static;
     end;
 
@@ -21,9 +22,24 @@ type
 implementation
 
 uses
-  Dialogs;
+  Dialogs, FileUtil;
 
 { TDirectory }
+
+class function TDirectory.getBursts(directory: string): string;
+var
+  files: TStringList;
+  resultString: string;
+begin
+  files := TStringList.Create();
+
+  try
+    FindAllFiles(files, directory, '', false);
+    result := files.CommaText;
+  finally
+    FreeAndNil(files);
+  end;
+end;
 
 class function TDirectory.getDirectory: string;
 var

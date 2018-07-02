@@ -41,6 +41,12 @@ var
   directory: string;
 begin
   directory := TDirectory.getDirectory;
+
+  if directory <> ''
+  then begin
+    lstBurst.Items.CommaText := TDirectory.getBursts(directory);
+  end;
+
 end;
 
 end.
