@@ -1,0 +1,35 @@
+object frmMain: TfrmMain
+  Left = 244
+  Height = 416
+  Top = 131
+  Width = 550
+  Caption = 'frmMain'
+  ClientHeight = 416
+  ClientWidth = 550
+  Menu = mnuMain
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 51
+    Height = 17
+    Top = 230
+    Width = 45
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object mnuMain: TMainMenu
+    left = 24
+    top = 10
+    object mnuMainFile: TMenuItem
+      Caption = '&File'
+      object mnuMainFileOpen: TMenuItem
+        Caption = '&Open directory'
+        ShortCut = 16463
+        OnClick = mnuMainFileOpenClick
+      end
+    end
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    left = 78
+    top = 112
+  end
+end
